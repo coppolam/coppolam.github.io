@@ -1,0 +1,6 @@
+*.aux
+*.bbl
+*.blg
+bib2html*
+mybibliography.html
+*.bak
