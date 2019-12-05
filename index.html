@@ -1,72 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mario Coppola</title>
-    <link rel="stylesheet" href="animation/animation.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-  </head>
-  <body>
-    <div id="footer">
-      <!-- <div id="spinner"></div> --> </div>
-    <div id="header" class="animated slideInDown" style="animation-delay: 0.5s; top: -20px; left: 0px;">
-      <div id="title">Mario Coppola</div>
-      <div id="links"> <a href="#about">about</a> <a href="#projects">projects</a><br>
-        <br>
-        <a href="#publications">publications</a> <a href="#code">code</a> </div>
+<head>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.2.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="animation/animation.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css"><!--=== Details ===-->
+  <title>Mario Coppola</title>
+</head>
+<body>
+  <!--- Spinner when loading website =-->
+  <div id="footer">
+    <!-- <div id="spinner"></div> -->
+  </div>
+  <div id="header" class="animated slideInDown" style="animation-delay: 0.1s; top: -20px; left: 0px;">
+    <div id="title">
+      Mario Coppola
     </div>
-    <!--br><br-->
-    <!--center>
-      <div id="details"> <a class="btn_social" href="mailto:m.coppola@tudelft.nl"><i class="fas fa-at"></i></a>        <a class="btn_social" href="https://www.linkedin.com/in/mariocoppola1/"><i class="fab fa-linkedin"></i>
-        </a>        <a class="btn_social"><i class="fab fa-dribbble"></i></a> </div>
-    </center-->
-    <!-- <center> -->
-    <!-- <div id="middle"> -->
-    <!--         <div id="tagline" class="animated zoomIn" style="animation-delay:1.8s;">
-            if you're reading this, that mean's you can read<br>            <button class="btn_one">haha ok</button>        </div> -->
-    <!-- </div> -->
-    <!-- </center> -->
-    <div id="portfolio">
-      <div id="about" class="animated slideInLeft" style="animation-delay:0.5s;">
-        <h1>About.</h1>
-        <div>
-          <p>Testing this out</p>
-        </div>
+    <div id="links">
+      <a href="#projects">projects</a>
+      <a href="#publications">publications</a>
+      <a href="#code">code</a>
+    </div>
+  </div>
+  <br>
+    <center>
+      <div id="details" class="animated slideInRight" style="animation-delay:0.1s;">
+        <a class="btn_social" href="mailto:m.coppola@tudelft.nl">
+          <i class="fas fa-at"></i>
+        </a>
+        <a class="btn_social" href="https://www.linkedin.com/in/mariocoppola1/">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a class="btn_social">
+          <i class="fab fa-dribbble"></i>
+        </a>
       </div>
-      <br>
-      <div id="projects">
-        <h1>Projects.</h1>
-        <div class="project">
-          <h2>Designing robotic swarms</h2>
-          <div><br>
-          </div>
-          <button class="btn_one">visit project</button> </div>
+    </center>
+  <div id="portfolio">
+   <!--  <div id="about" class="animated slideInLeft" style="animation-delay:0.1s;">
+      <h1>About.</h1>
+      <div>
+        <p>Testing this out</p>
+      </div>
+    </div><br> -->
+    <!--================= PROJECTS =================-->
+    <div id="projects" class="animated slideInLeft" style="animation-delay:0.1s;">
+      <h1>Projects.</h1>
+      <div class="project">
+        <h2>Designing robotic swarms</h2>
+        <div>
+          Project description
+        </div><a href="projects/swarm_intelligence.html"><button class="btn_one">Read more</button></a> <!-- <button class="btn_one">visit project</button> </div> -->
         <div class="project">
           <h2>On-board relative localization for drones</h2>
-          <div>The first step to collaboration is knowing where your neighbors
-            are. This is still an ongoing challenge in robotics. In this
-            project, we have developed on-board solutions that can fit on even
-            the smallest drones, simply based on communication via antennas.
-            This solution is light-weight and energy efficient. We demonstrated
-            accurate results in indoor scenarios, where GPS and other such
-            infrastructure is not available.</div>
-            <a href=projects/relative_localization.html>
-            <button class="btn_one">visit project</button>
-            </a>
-            <button class="btn_two">code</button>
+          <div>
+            The first step to collaboration is knowing where your neighbors are. This is still an ongoing challenge in robotics. In this project, we have developed on-board solutions that can fit on even the smallest drones, simply based on communication via antennas. This solution is light-weight and energy efficient. We demonstrated accurate results in indoor scenarios, where GPS and other such infrastructure is not available.
+          </div><a href="projects/relative_localization.html"><button class="btn_one">Read more</button></a> <!-- <button class="btn_two">code</button> -->
         </div>
       </div>
-      <div id="code">
+      <!--================= CODE =================-->
+      <div id="code" class="animated slideInRight" style="animation-delay:0.1s;">
         <h1>code.</h1>
+        <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/coppolam/swarmulator/archive/master.zip" data-color-scheme="no-preference: dark; light: light; dark: dark;" data-icon="octicon-cloud-download" data-size="large" aria-label="Download coppolam/swarmulator on GitHub">Download</a>
+      </div>
+      <!--================= PUBLICATIONS =================-->
+      <div id="publications">
+        <h1>publications.</h1>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>

@@ -1,11 +1,11 @@
 body,html {
-    padding:0px;
-    margin:0px;
+    margin:auto;
     font-family: 'Comfortaa', cursive;
     font-weight:bold;
     color:#fff;
     background:rgb(0, 0, 0);
     scroll-behavior: smooth;
+    width: 100vw;
 }
 #loading {
     width: 100vw;
@@ -88,9 +88,10 @@ body,html {
     width:60%;
 }
 #portfolio {
-    width:80%;
+    width:60%;
     padding:2% 10%;
     padding-top:10vh;
+    margin:auto;
 }
 #portfolio div h1 {
     font-size:40px;
@@ -105,9 +106,10 @@ body,html {
     animation: Gradient 20s ease infinite;
     font-family: 'Comfortaa', cursive;
 }
-#skills {
+#publications {
     margin:4vh 0px !important;
     padding:2vh 0px !important;
+    overflow : hidden;
 }
 #work {
     margin:4vh 0px !important;
@@ -120,6 +122,7 @@ body,html {
 #contact form {
     width:100%;
 }
+
 #contact form input {
     width:46%;
     margin:20px 1%;
@@ -205,8 +208,10 @@ body,html {
     border-radius:50%;
     background:#000;
     transition:0.4s ease-in-out;
+    text-decoration: none;
 }
 .btn_social:hover {
+    text-decoration: none;
     color:#000;
     background:#fff;
     cursor:pointer;
