@@ -353,13 +353,14 @@ button:focus {
     #publications h1 {
         width:33%;
     }
-    header {
+    #header {
         width:100%;
         background:#fff;
         padding:4vh 2vw;
         position:relative;
     }
     #header table tr td {
+        background:#fff;
         width:100%;
         display:block;
         text-align:center;
