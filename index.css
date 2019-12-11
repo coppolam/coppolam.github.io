@@ -3,7 +3,8 @@ body,html {
     font-family: 'Comfortaa', cursive;
     font-weight:bold;
     color:#000;
-    background: #EEEFF2;
+/*    background: #EEEFF2;*/
+background:linear-gradient(0deg,rgba(0,0,0,1),rgba(0,0,0,0)),url("https://images.unsplash.com/photo-1494587351196-bbf5f29cff42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&&w=1351&q=80") center center fixed;
     scroll-behavior: smooth;
     width: 100vw;
 }
