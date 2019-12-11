@@ -1,91 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.2.0">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="animation/animation.css">
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
-  </script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <link rel="stylesheet" href="index.css"><!--=== Details ===-->
-  <title>Mario Coppola</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>yourname</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"> -->
+    <link rel="stylesheet" href="animation/animation.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 <body>
-  <!--- Spinner when loading website =-->
-  <div id="footer">
-    <div id="spinner"></div>
-  </div>
-  <div id="header" class="animated slideInDown" style="animation-delay: 0.1s; top: -20px; left: 0px;">
-    <div id="title">
-      Mario Coppola
+    
+    <div id="loading">
+        <div id="spinner"></div>
     </div>
-    <div id="links">
-      <a href="#projects">projects</a>
-      <a href="#publications">publications</a>
-      <a href="#code">code</a>
+    <div id="magnify">
+        <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
+        <div id="img_here"></div>
     </div>
-  </div>
-    <center>
-      <div id="details" class="animated slideInRight" style="animation-delay:0.1s;">
-        <a class="btn_social" href="mailto:m.coppola@tudelft.nl">
-          <i class="fas fa-at"></i>
-        </a>
-        <a class="btn_social" href="https://www.linkedin.com/in/mariocoppola1/">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </div>
-    </center>
-  <div id="portfolio">
-    <!--================= PROJECTS =================-->
-    <div id="projects" class="animated slideInLeft" style="animation-delay:0.1s;">
-      <h1>Projects.</h1>
-<table border="0" cellpadding="5">
-  <tbody>
-<!-- descriptions -->
-<tr>
-<td width="50%" valign="top">
-<div class="project">
 
-	<img class="fit" src="index.jpeg" alt="description here" />
-        <h2>Designing robotic swarms</h2>
-        <div>
-          Project description
-        </div><a href="projects/swarm_intelligence.html"><button class="btn_one">Read more</button></a> <!-- <button class="btn_one">visit project</button> </div> -->
-</td>
-<td width="50%" valign="top">
-<div class="project">
+    <header id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+        <table>
+            <tr>
+                <td id="logo">Mario Coppola</td>
+                <td id="navigation">
+                    <a href="#projects">projects</a>
+                    <a href="#code">code</a>
+                    <a href="#publications">publications</a>
+                </td>
+            </tr>
+        </table>
+    </header>
 
-	<img class="fit" src="index.jpeg" alt="description here" />
-          <h2>On-board relative localization for drones</h2>
-          <div>
-            The first step to collaboration is knowing where your neighbors are. This is still an ongoing challenge in robotics.
-            <br><br>
-            In this project, we have developed on-board solutions that can fit on even the smallest drones, simply based on communication via antennas. This solution is light-weight and energy efficient. We demonstrated accurate results in indoor scenarios, where GPS and other such infrastructure is not available.
-          </div><a href="projects/relative_localization.html"><button class="btn_one">Read more</button></a> <!-- <button class="btn_two">code</button> -->
+    <table id="top_part">
+        <tr>
+            <td id="about" class="animated slideInLeft" style="animation-delay:2s;">
+                <!--
+			<h1>this is where you put your about or tagline</h1>
+                	<button class="btn_one">Hire Me</button><br>
+		-->
+                <table>
+                    <tr>
+                        <td class="animated zoomIn" style="animation-delay:2.2s;">
+				<a class="social" href="https://www.linkedin.com/in/mariocoppola1/"><i class="fab fa-linkedin"></i></a>
+			</td>
+                        <td class="animated zoomIn" style="animation-delay:2.4s;">
+				<a class="social" href="mailto:m.coppola@tudelft.nl"><i class="fas fa-at">
+			</i></a></td>
+                        </tr>
+                </table>
+            </td>
+            <td id="rightImage" class="animated jackInTheBox" style="animation-delay:2.2s;"></td>
+        </tr>
+    </table>
+
+    <div id="projects">
+        <h1>projects.</h1>
+        <div id="photos">
+            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1547922657-b370d1687eb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80">
+            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1549375463-8cbc18ca3f24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80">
+            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=650&q=80">
+            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1549309019-a1d77aeae74f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1547149666-769b42053e67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80">
+            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1547950515-e652d0f50b1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1545342084-d03fe58ea023?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80">
         </div>
-</td>
-  </tbody>
-</tr>
-
-</table>
-
-        
-      </div>
-      <!--================= CODE =================-->
-      <div id="code" class="animated slideInRight" style="animation-delay:0.1s;">
+    </div>
+<!--================= CODE =================-->
+    <div id="code" class="animated slideInRight" style="animation-delay:0.1s;">
         <h1>code.</h1>
-        <!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/coppolam/swarmulator/archive/master.zip" data-color-scheme="no-preference: dark; light: light; dark: dark;" data-icon="octicon-cloud-download" data-size="large" aria-label="Download coppolam/swarmulator on GitHub">Download</a>
+            <!-- Place this tag where you want the button to render. -->
+            <a class="github-button" href="https://github.com/coppolam/swarmulator/archive/master.zip" data-color-scheme="no-preference: dark; light: light; dark: dark;" data-icon="octicon-cloud-download" data-size="large" aria-label="Download coppolam/swarmulator on GitHub">Download</a>
       </div>
       <!--================= PUBLICATIONS =================-->
       <div id="publications">
         <h1>publications.</h1>
       </div>
-    </div>
-  </div>
+    <script src="index.js" type="text/javascript"></script>
 </body>
 </html>
