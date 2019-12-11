@@ -163,7 +163,7 @@ header table {
 }
 #rightImage {
     width:100%;
-    height:10vh;
+    height:95vh;
     background:linear-gradient(0deg,rgba(0, 102, 102, 0.8),rgba(0, 166, 214, 0.8)),url("banner.jpg") center center;
     background-size:cover; /*cover*/
     background-repeat:no-repeat;
@@ -273,16 +273,6 @@ header table {
     top:-25px;
     left:30px;
 }
-#footer {
-    width:100%;
-    padding:10vh 0px;
-    text-align:center;
-    font-weight:bold;
-}
-#footer a {
-    color:rgb(0, 0, 0);
-    text-decoration:none;
-}
 ::placeholder {
     color:#000;
 }
@@ -301,11 +291,6 @@ button:focus {
 }
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0,0.8); 
-}
-#standalone {
-    width:80%;
-    text-align: justify;
-    margin: auto;
 }
 @media (max-width: 600px){
     #photos {
@@ -345,6 +330,7 @@ button:focus {
     #about table tr td {
         text-align:center;
     }
+
     #publications table tr td {
         width:100%;
         display:block;
@@ -368,10 +354,10 @@ button:focus {
         width:33%;
     }
     header {
-        width:96vw; 
+        width:100%;
         background:#fff;
         padding:4vh 2vw;
-        position:absolute;
+        position:relative;
     }
     #header table tr td {
         width:100%;
@@ -383,3 +369,4 @@ button:focus {
         color:#000;
     }
 }
+
