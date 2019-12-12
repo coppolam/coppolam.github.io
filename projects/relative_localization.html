@@ -1,59 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>yourname</title>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"> -->
-    <link rel="stylesheet" href="../animation/animation.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="../index.css">
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-  </head>
-
-  <body>
-    <div id="standalone">
-      <div 
-        id="project"
-        class="animated slideInLeft"
-        style="animation-delay:0.5s;">
-        <h1>
-          On-board relative localization for drones
-        </h1>
-        <div>
-          Teams of autonomous drones could be used in rescue missions, exploration, and more. How can we enable them to fly together safely? We are working on challenges to solve this.
-
-          Imagine being able to launch several drones into a building and having them come back with relevant information within minutes – all autonomously. For drones to collaborate in such a task, they must be able to avoid each other, follow each other, and more.
-
-          This all has to be done in an efficient way and entirely using drone-to-drone technology so that it is truly independent of the environment. We also need algorithms that run efficiently on-board, leaving as much computational power as possible for the real task.
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <title>yourname</title><!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"> -->
+  <link href="../animation/animation.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+  </script>
+  <link href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" rel="stylesheet">
+  <link href="standalone.css" rel="stylesheet">
+  <script async defer src="https://buttons.github.io/buttons.js">
+  </script>
+</head>
+<body>
+  <div id="magnify">
+    <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
+    <div id="img_here"></div>
+  </div>
+  <header id="header">
+    <table>
+      <tr>
+        <td id="logo">Mario Coppola</td>
+        <td id="navigation">
+          <a href="../index.html">back to home ←</a>
+        </td>
+      </tr>
+    </table>
+  </header>
+  <div id="standalone">
+    <div class="animated fadeIn" id="project" style="animation-delay:0.5s;">
+      <h1>On-board relative localization for drones</h1>
+      <div>
+        Teams of autonomous drones could be used in rescue missions, exploration, and more. How can we enable them to fly together safely? We are working on challenges to solve this. Imagine being able to launch several drones into a building and having them come back with relevant information within minutes – all autonomously. For drones to collaborate in such a task, they must be able to avoid each other, follow each other, and more. This all has to be done in an efficient way and entirely using drone-to-drone technology so that it is truly independent of the environment. We also need algorithms that run efficiently on-board, leaving as much computational power as possible for the real task.
+      </div>
+      <h2>Bluetooth based relative localization</h2>
+      <div>
+        The first step to collaboration is not getting in each other’s way. In our first work, published in Autonomous Robots in May 2018, we devised an algorithm for relative localization that was based only on communication using Bluetooth antennas. The Bluetooth antennas also acted as range sensors using the Received Signal Strength Index (RSSI) of a signal. Thanks to this, even our tiny pocket drones were able to fly close to each other while avoiding collisions.<br>
+        <br>
+        <div class="auto-resizable-iframe" style="height:315px;max-width:512;text-align: center;">
+          <iframe allowfullscreen frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/snoMnxkcpGY" width="512"></iframe>
         </div>
-        <h2>
-          Bluetooth based relative localization
-        </h2>
-        <div>
-          The first step to collaboration is not getting in each other’s way. In our first work, published in Autonomous Robots in May 2018, we devised an algorithm for relative localization that was based only on communication using Bluetooth antennas. The Bluetooth antennas also acted as range sensors using the Received Signal Strength Index (RSSI) of a signal. Thanks to this, even our tiny pocket drones were able to fly close to each other while avoiding collisions.
-        </div>
-        <h2>
-          UWB-based relative localization
-        </h2>
-        What started off as collision avoidance has now developed in full-fledged leader-follower flight, where a leader can fly and multiple drones can accurately track and follow its trajectory.
-
-        The ranging accuracy of Bluetooth is low, and insufficient to enable behaviors that are more complex, such as leader-follower flight. By upgrading to Ultra Wide Band modules, we were able to achieve far more accurate ranging between the drones. Thanks to the increase in accuracy over Bluetooth ranging, we were also capable of eliminating the reliance on the magnetometer, thus also rendering the system completely independent of magnetic disturbances in indoor environments.
-
-        Here is a video showing our demo flight.
-        <!-- <br>
+      </div><br>
+      <h2>UWB-based relative localization</h2>What started off as collision avoidance has now developed in full-fledged leader-follower flight, where a leader can fly and multiple drones can accurately track and follow its trajectory. The ranging accuracy of Bluetooth is low, and insufficient to enable behaviors that are more complex, such as leader-follower flight. By upgrading to Ultra Wide Band modules, we were able to achieve far more accurate ranging between the drones. Thanks to the increase in accuracy over Bluetooth ranging, we were also capable of eliminating the reliance on the magnetometer, thus also rendering the system completely independent of magnetic disturbances in indoor environments. Here is a video showing our demo flight. <!-- <br>
           <img src="../figures/leaderfollower.gif"
           style="width:40%;"
           class="center"> -->
-        <br><br>
-        <div style="text-align: center;">
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/LNFUveNR4p8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class=center></iframe>
-      </div>
-        <br><br><br>
-      </div>
+      <br>
+      <br>
+      <div class="auto-resizable-iframe" style="height:315px;max-width:512;text-align: center;">
+        <iframe allowfullscreen class="center" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/LNFUveNR4p8" width="560"></iframe>
+      </div><br>
+      <br>
+      <br>
     </div>
-  </body>
-
+  </div>
+  <div id="standalone">
+    <h2>Relevant publications, data, and code</h2>
+    <ul>
+      <li>
+        <p><a id="bluetooth" name="bluetooth"></a> <b>Mario</b> <b>Coppola</b>, Kimberly&nbsp;N. McGuire, Kirk Y.&nbsp;W. Scheper, and Guido C. H.&nbsp;E. de&nbsp;Croon. On-board communication-based relative localization for collision avoidance in Micro Air Vehicle teams. <em>Autonomous Robots</em>, 42(8):1787--1805, Dec 2018.<br>
+        [&nbsp;<a href="mybibliography_bib.html#bluetooth">bib</a>&nbsp;]</p>
+        <ul>
+          <li>Download the paper (open-access):<a href="https://link.springer.com/article/10.1007/s10514-018-9760-3">https://link.springer.com/article/10.1007/s10514-018-9760-3</a>
+          </li>
+          <li>Download data: <a href="https://surfdrive.surf.nl/files/index.php/s/SATKxMKwwQX26Jp">https://surfdrive.surf.nl/files/index.php/s/SATKxMKwwQX26Jp</a>
+          </li>
+          <li>Download code from Github: <a aria-label="Download coppolam/relative_localization_bluetooth_dataprocessing on GitHub" class="github-button" data-color-scheme="no-preference: dark; light: light; dark: dark;" data-icon="octicon-cloud-download" data-size="large" href="https://github.com/coppolam/relative_localization_bluetooth_dataprocessing/archive/master.zip">Download</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><a id="steven" name="steven"></a> Steven van&nbsp;der Helm, <b>Mario</b> <b>Coppola</b>, Kimberly&nbsp;N. McGuire, and Guido C. H.&nbsp;E. de&nbsp;Croon. On-board range-based relative localization for micro air vehicles in indoor leader--follower flight. <em>Autonomous Robots</em>, Mar 2019.<br>
+        [&nbsp;<a href="mybibliography_bib.html#steven">bib</a>&nbsp;]</p>
+        <ul>
+          <li>Download the paper (open-access):<a href="https://link.springer.com/article/10.1007/s10514-019-09843-6">https://link.springer.com/article/10.1007/s10514-019-09843-6</a>
+          </li>
+          <li>Download data: <a href="https://surfdrive.surf.nl/files/index.php/s/0k9vwKe8DZnWsdp">https://surfdrive.surf.nl/files/index.php/s/0k9vwKe8DZnWsdp</a>
+          </li>
+          <li>Download code from Github: <a aria-label="Download coppolam/relative_localization_UWB_analysis on GitHub" class="github-button" data-color-scheme="no-preference: dark; light: light; dark: dark;" data-icon="octicon-cloud-download" data-size="large" href="https://github.com/coppolam/relative_localization_UWB_analysis/archive/master.zip">Download</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <script src="index.js" type="text/javascript">
+  </script>https://surfdrive.surf.nl/files/index.php/s/0k9vwKe8DZnWsdp
+</body>
 </html>

@@ -1,163 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>yourname</title>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"> -->
-    <link rel="stylesheet" href="animation/animation.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <title>yourname</title><!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"> -->
+  <link href="animation/animation.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+  </script>
+  <link href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+  <script async defer src="https://buttons.github.io/buttons.js">
+  </script>
 </head>
 <body>
-    
-    <div id="loading">
-        <div id="spinner"></div>
-    </div>
-    <div id="magnify">
-        <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
-        <div id="img_here"></div>
-    </div>
-
-    <header id="header" class="animated slideInDown" style="animation-delay:1.8s;">
-        <table>
-            <tr>
-                <td id="logo">Mario Coppola</td>
-                <td id="navigation">
-                    <a href="#projects">projects</a>
-                    <a href="#code">code</a>
-                    <a href="#publications">publications</a>
-                </td>
-            </tr>
-        </table>
-    </header>
-
-    <table id="top_part">
-        <tr>
-            <td id="about" class="animated slideInLeft" style="animation-delay:2s;">
-                <!--
-			<h1>this is where you put your about or tagline</h1>
-                	<button class="btn_one">Hire Me</button><br>
-		-->
-                <table>
-                    <tr>
-                        <td class="animated zoomIn" style="animation-delay:2.2s;">
-				<a class="social" href="https://www.linkedin.com/in/mariocoppola1/"><i class="fab fa-linkedin"></i></a>
-			</td>
-                        <td class="animated zoomIn" style="animation-delay:2.4s;">
-				<a class="social" href="mailto:m.coppola@tudelft.nl"><i class="fas fa-at">
-			</i></a></td>
-                        </tr>
-                </table>
-            </td>
-<!--             <td id="rightImage" class="animated jackInTheBox" style="animation-delay:2.2s;"></td>
- -->        
- <td id="rightImage" class="animated fadeIn" style="animation-delay:2.2s;"></td>
-</tr>
+  <div id="loading">
+    <div id="spinner"></div>
+  </div>
+  <div id="magnify">
+    <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
+    <div id="img_here"></div>
+  </div>
+  <header class="animated slideInDown" id="header" style="animation-delay:1s;">
+    <table>
+      <tr>
+        <td id="logo">Mario Coppola</td>
+        <td id="navigation">
+          <a href="#projects">projects</a> <a href="#code">code</a> <a href="#publications">publications</a>
+        </td>
+      </tr>
     </table>
-
-    <div id="projects">
-        <h1>projects.</h1>
-        <div id="photos">
-            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1547922657-b370d1687eb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80">
-            <h2>Designing robotic swarms</h2>
-            <div>
-                Project description
-            </div>
-            <a href="projects/swarm_intelligence.html">
-                <button class="btn_one">Read more</button>
-            </a> <!-- <button class="btn_one">visit project</button> </div> -->
-            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1549375463-8cbc18ca3f24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80">
-            <h2>On-board relative localization for drones</h2>
-            <div>
-            The first step to collaboration is knowing where your neighbors are. This is still an ongoing challenge in robotics.
-            <br><br>
-            In this project, we have developed on-board solutions that can fit on even the smallest drones, simply based on communication via antennas. This solution is light-weight and energy efficient. We demonstrated accurate results in indoor scenarios, where GPS and other such infrastructure is not available.
-          </div><a href="projects/relative_localization.html"><button class="btn_one">Read more</button></a> <!-- <button class="btn_two">code</button> -->
-        </div>
-        </div>
+  </header>
+  <table id="top_part">
+    <tr>
+      <td class="animated slideInLeft" id="about" style="animation-delay:1s;">
+        <!--
+            <h1>this is where you put your about or tagline</h1>
+                    <button class="btn_one">Hire Me</button><br>
+        -->
+        <table>
+          <tr>
+            <td class="animated zoomIn" style="animation-delay:1s;">
+              <a class="social" href="https://www.linkedin.com/in/mariocoppola1/"><i class="fab fa-linkedin"></i></a>
+            </td>
+            <td class="animated zoomIn" style="animation-delay:1s;">
+              <a class="social" href="mailto:m.coppola@tudelft.nl"><i class="fas fa-at"></i></a>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td class="animated fadeIn" id="rightImage" style="animation-delay:1s;"></td>
+    </tr>
+  </table>
+  <div class="animated fadeIn" id="projects" style="animation-delay:1.2s;">
+    <h1>projects.</h1>
+    <h2>Designing robotic swarms</h2>
+    <div id="photos">
+      <img onclick="magnify($(this).attr('src'))" src="swarm.png">
+      <div>
+        Imagine large swarms of cheap robots that can coordinately lift loads together, explore large areas, and build structures.<br>
+        <br>
+        Two challenges remain to be solved:<br>
+        1. the top-down automatic development of local rules from a global goal.<br>
+        2. the bottom-up verification of whether the local rules will lead to the desired global goal.<br>
+        <br>
+        In this project, I am trying to find new algorithms to solve these open challenges.
+      </div><a href="projects/swarm_intelligence.html"><button class="btn_one">Read more</button></a> <!-- <button class="btn_one">visit project</button> </div> -->
     </div>
-<!--================= CODE =================-->
-    <div id="code" class="animated slideInRight" style="animation-delay:0.1s;">
-        <h1>code.</h1>
-            <!-- Place this tag where you want the button to render. -->
-            <a class="github-button" href="https://github.com/coppolam/swarmulator/archive/master.zip" data-color-scheme="no-preference: dark; light: light; dark: dark;" data-icon="octicon-cloud-download" data-size="large" aria-label="Download coppolam/swarmulator on GitHub">Download</a>
-      </div>
-      <!--================= PUBLICATIONS =================-->
-      <div id="publications">
-        <h1>publications.</h1>
-<p><a name="pagerank"></a>
-
-<b>Mario</b>. <b>Coppola</b>, Jian Guo, Eberhard Gill, and Guido C. H.&nbsp;E.
-  de&nbsp;Croon.
- The pagerank algorithm as a method to optimize swarm behavior through
-  local analysis.
- <em>Swarm Intelligence</em>, 13(3):277--319, Dec 2019.<br />
-[&nbsp;<a href="mybibliography_bib.html#pagerank">bib</a>&nbsp;| 
-<a href="http://dx.doi.org/10.1007/s11721-019-00172-z">DOI</a>&nbsp;| 
-<a href="https://doi.org/10.1007/s11721-019-00172-z">http</a>&nbsp;]
-
-</p>
-
-<p><a name="bluetooth"></a>
-
-<b>Mario</b> <b>Coppola</b>, Kimberly&nbsp;N. McGuire, Kirk Y.&nbsp;W. Scheper, and
-  Guido C. H.&nbsp;E. de&nbsp;Croon.
- On-board communication-based relative localization for collision
-  avoidance in Micro Air Vehicle teams.
- <em>Autonomous Robots</em>, 42(8):1787--1805, Dec 2018.<br />
-[&nbsp;<a href="mybibliography_bib.html#bluetooth">bib</a>&nbsp;]
-
-</p>
-
-<p><a name="steven"></a>
-
-Steven van&nbsp;der Helm, <b>Mario</b> <b>Coppola</b>, Kimberly&nbsp;N. McGuire, and
-  Guido C. H.&nbsp;E. de&nbsp;Croon.
- On-board range-based relative localization for micro air vehicles in
-  indoor leader--follower flight.
- <em>Autonomous Robots</em>, Mar 2019.<br />
-[&nbsp;<a href="mybibliography_bib.html#steven">bib</a>&nbsp;]
-<p>
-</p>
-
-<p><a name="paper1"></a>
-
-<b>Mario</b> <b>Coppola</b>, Jian Guo, Eberhard Gill, and Guido C. H.&nbsp;E.
-  de&nbsp;Croon.
- Provable self-organizing pattern formation by a swarm of robots with
-  limited knowledge.
- <em>Swarm Intelligence</em>, 13(1):59--94, Mar 2019.<br />
-[&nbsp;<a href="mybibliography_bib.html#paper1">bib</a>&nbsp;]
-
-</p>
-
-<p><a name="antspaper"></a>
-
-<b>Mario</b> <b>Coppola</b> and Guido C. H.&nbsp;E. de&nbsp;Croon.
- Optimization of swarm behavior assisted by an automatic local proof
-  for a pattern formation task.
- In Marco Dorigo, Mauro Birattari, Christian Blum, Anders&nbsp;L.
-  Christensen, Andreagiovanni Reina, and Vito Trianni, editors, <em>Swarm
-  Intelligence</em>, pages 123--134, Cham, 2018. Springer International Publishing.<br />
-[&nbsp;<a href="mybibliography_bib.html#antspaper">bib</a>&nbsp;]
-
-</p>
-
-<p><a name="kimberlyiros"></a>
-
-Kimberly McGuire, <b>Mario</b> <b>Coppola</b>, Christophe de Wagter,
-  and Guido C. H.&nbsp;E. de Croon.
- Towards autonomous navigation of multiple pocket-drones in real-world
-  environments.
- In <em>2017 IEEE/RSJ International Conference on Intelligent Robots
-  and Systems (IROS)</em>, pages 244--249, Sep. 2017.<br />
-[&nbsp;<a href="mybibliography_bib.html#kimberlyiros">bib</a>&nbsp;]
-
-      </div>
-    <script src="index.js" type="text/javascript"></script>
+    <h2>On-board relative localization for drones</h2>
+    <div id="photos">
+      <img onclick="magnify($(this).attr('src'))" src="http://mavlab.tudelft.nl/wp-content/uploads/2019/03/drawing.svg_.png">
+      <div>
+        The first step to collaboration is knowing where your neighbors are. This is still an ongoing challenge in robotics.<br>
+        <br>
+        In this project, we have developed on-board solutions that can fit on even the smallest drones, simply based on communication via antennas. This solution is light-weight and energy efficient. We demonstrated accurate results in indoor scenarios, where GPS and other such infrastructure is not available.
+      </div><a href="projects/relative_localization.html"><button class="btn_one">Read more</button></a> <!-- <button class="btn_two">code</button> -->
+    </div>
+  </div><!--================= CODE =================-->
+  <div class="animated slideInRight" id="code" style="animation-delay:1s;">
+    <h1>code.</h1>
+    <h2>Swarmulator</h2>
+    <div id="photos">
+      <p><img onclick="magnify($(this).attr('src'))" src="https://raw.githubusercontent.com/coppolam/swarmulator/master/logo.png"></p>
+      <p>Swarmulator is a lightweight C++ simulator for simulating swarms. Swarmulator offers a simple platform to prototype swarm behaviors, used in multiple publications (see git branches).</p>
+      <p><!-- Place this tag where you want the button to render. -->
+       <a aria-label="Download coppolam/swarmulator on GitHub" class="github-button" data-color-scheme="no-preference: dark; light: light; dark: dark;" data-icon="octicon-cloud-download" data-size="large" href="https://github.com/coppolam/swarmulator/archive/master.zip">Download</a></p>
+    </div><br>
+    <br>
+    Find my other repositories linked with publications at my main github page:<br>
+    <a href="https://github.com/coppolam/">https://github.com/coppolam/</a>
+  </div><!--================= PUBLICATIONS =================-->
+  <div id="publications">
+    <h1>publications.</h1>
+    <p><a id="pagerank" name="pagerank"></a> <b>Mario</b>. <b>Coppola</b>, Jian Guo, Eberhard Gill, and Guido C. H.&nbsp;E. de&nbsp;Croon. The pagerank algorithm as a method to optimize swarm behavior through local analysis. <em>Swarm Intelligence</em>, 13(3):277--319, Dec 2019.<br>
+    [&nbsp;<a href="mybibliography_bib.html#pagerank">bib</a>&nbsp;| <a href="http://dx.doi.org/10.1007/s11721-019-00172-z">DOI</a>&nbsp;| <a href="https://doi.org/10.1007/s11721-019-00172-z">http</a>&nbsp;]</p>
+    <p><a id="bluetooth" name="bluetooth"></a> <b>Mario</b> <b>Coppola</b>, Kimberly&nbsp;N. McGuire, Kirk Y.&nbsp;W. Scheper, and Guido C. H.&nbsp;E. de&nbsp;Croon. On-board communication-based relative localization for collision avoidance in Micro Air Vehicle teams. <em>Autonomous Robots</em>, 42(8):1787--1805, Dec 2018.<br>
+    [&nbsp;<a href="mybibliography_bib.html#bluetooth">bib</a>&nbsp;]</p>
+    <p><a id="steven" name="steven"></a> Steven van&nbsp;der Helm, <b>Mario</b> <b>Coppola</b>, Kimberly&nbsp;N. McGuire, and Guido C. H.&nbsp;E. de&nbsp;Croon. On-board range-based relative localization for micro air vehicles in indoor leader--follower flight. <em>Autonomous Robots</em>, Mar 2019.<br>
+    [&nbsp;<a href="mybibliography_bib.html#steven">bib</a>&nbsp;]</p>
+    <p></p>
+    <p><a id="paper1" name="paper1"></a> <b>Mario</b> <b>Coppola</b>, Jian Guo, Eberhard Gill, and Guido C. H.&nbsp;E. de&nbsp;Croon. Provable self-organizing pattern formation by a swarm of robots with limited knowledge. <em>Swarm Intelligence</em>, 13(1):59--94, Mar 2019.<br>
+    [&nbsp;<a href="mybibliography_bib.html#paper1">bib</a>&nbsp;]</p>
+    <p><a id="antspaper" name="antspaper"></a> <b>Mario</b> <b>Coppola</b> and Guido C. H.&nbsp;E. de&nbsp;Croon. Optimization of swarm behavior assisted by an automatic local proof for a pattern formation task. In Marco Dorigo, Mauro Birattari, Christian Blum, Anders&nbsp;L. Christensen, Andreagiovanni Reina, and Vito Trianni, editors, <em>Swarm Intelligence</em>, pages 123--134, Cham, 2018. Springer International Publishing.<br>
+    [&nbsp;<a href="mybibliography_bib.html#antspaper">bib</a>&nbsp;]</p>
+    <p><a id="kimberlyiros" name="kimberlyiros"></a> Kimberly McGuire, <b>Mario</b> <b>Coppola</b>, Christophe de Wagter, and Guido C. H.&nbsp;E. de Croon. Towards autonomous navigation of multiple pocket-drones in real-world environments. In <em>2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</em>, pages 244--249, Sep. 2017.<br>
+    [&nbsp;<a href="mybibliography_bib.html#kimberlyiros">bib</a>&nbsp;]</p>
+  </div>
+  <script src="index.js" type="text/javascript">
+  </script>
 </body>
 </html>
