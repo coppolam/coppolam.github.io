@@ -369,7 +369,7 @@ button:focus {
   #header {
     width: 100%;
     background: #fff;
-    padding: 4vh 2vw;
+    padding: 4vh 0vw;
     position: relative;
   }
   #header table tr td {
