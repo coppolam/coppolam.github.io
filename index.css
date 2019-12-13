@@ -193,7 +193,7 @@ header table {
   width: 90%;
   margin: auto;
   columns: 3;
-  column-gap: 4%;
+  column-gap: 7%;
   z-index: 1;
   transition: 0.4s ease-in-out;
 }
@@ -201,6 +201,7 @@ header table {
   width: 100%;
   size: 50% height:auto;
   margin: 4.5% 0px;
+  padding-left: 2vw;
   transition: 0.4s ease-in-out;
 }
 #photos img:hover {
