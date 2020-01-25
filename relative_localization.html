@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Mario Coppola -- Relative Localization</title>
+  <!-- Font Awesome Icons -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <!-- Plugin CSS -->
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <!-- Theme CSS - Includes Bootstrap -->
+  <link href="css/creative.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="index.html">Back to home</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#about">About me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#publications">Publications</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <section class="page-section bg-dark" id="project">
+      <div class="container text-white-75">
+      <h1>On-board relative localization for drones</h1>
+      <div>
+        Teams of autonomous drones could be used in rescue missions, exploration, and more. How can we enable them to fly together safely? We are working on challenges to solve this. Imagine being able to launch several drones into a building and having them come back with relevant information within minutes – all autonomously. For drones to collaborate in such a task, they must be able to avoid each other, follow each other, and more. This all has to be done in an efficient way and entirely using drone-to-drone technology so that it is truly independent of the environment. We also need algorithms that run efficiently on-board, leaving as much computational power as possible for the real task.
+      </div>
+      <h2>Bluetooth based relative localization</h2>
+      <div>
+        The first step to collaboration is not getting in each other’s way. In our first work, published in Autonomous Robots in May 2018, we devised an algorithm for relative localization that was based only on communication using Bluetooth antennas. The Bluetooth antennas also acted as range sensors using the Received Signal Strength Index (RSSI) of a signal. Thanks to this, even our tiny pocket drones were able to fly close to each other while avoiding collisions.<br>
+        <br>
+
+        <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/snoMnxkcpGY" allowfullscreen></iframe>
+</div>
+
+      </div><br>
+      <h2>UWB-based relative localization</h2>What started off as collision avoidance has now developed in full-fledged leader-follower flight, where a leader can fly and multiple drones can accurately track and follow its trajectory. The ranging accuracy of Bluetooth is low, and insufficient to enable behaviors that are more complex, such as leader-follower flight. By upgrading to Ultra Wide Band modules, we were able to achieve far more accurate ranging between the drones. Thanks to the increase in accuracy over Bluetooth ranging, we were also capable of eliminating the reliance on the magnetometer, thus also rendering the system completely independent of magnetic disturbances in indoor environments. Here is a video showing our demo flight. <!-- <br>
+          <img src="../figures/leaderfollower.gif"
+          style="width:40%;"
+          class="center"> -->
+      <br>
+      <br>
+              <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/LNFUveNR4p8" allowfullscreen></iframe>
+</div>
+
+      <br>
+      <br>
+    </div>
+  </div>
+
+</section>
+<section class="page-section bg-light" id="project">
+        <div class="container text-dark-75">
+    <h2>Related publications</h2>
+
+    <p><a id="steven" name="steven"></a> 
+      <h5>On-board range-based relative localization for micro air vehicles in indoor leader-follower flight.</h5>
+      Steven van der Helm, <b>Mario</b> <b>Coppola</b>, Kimberly N. McGuire, and Guido C. H. E. de Croon. 
+      <em>Autonomous Robots</em>, Mar 2019.<br><br>
+          <p class="text-right">
+      <a class="btn btn-dark" href="https://link.springer.com/article/10.1007/s10514-018-9760-3">Link to paper</a>
+      <a class="btn btn-dark" href="https://surfdrive.surf.nl/files/index.php/s/SATKxMKwwQX26Jp">Download data</a>
+      <a class="btn btn-dark" href="https://github.com/coppolam/relative_localization_bluetooth_dataprocessing/archive/master.zip">Download code</a>
+    </p>
+    <hr>    
+  <p>
+  <a id="bluetooth" name="bluetooth"></a> 
+  <h5>On-board communication-based relative localization for collision avoidance in Micro Air Vehicle teams.</h5>
+  <b>Mario</b> <b>Coppola</b>, Kimberly&nbsp;N. McGuire, Kirk Y.&nbsp;W. Scheper, and Guido C. H.&nbsp;E. de&nbsp;Croon.  <em>Autonomous Robots</em>, 42(8):1787--1805, Dec 2018.<br><br>
+    <p class="text-right">
+      <a class="btn btn-dark" href="https://link.springer.com/article/10.1007/s10514-019-09843-6">Link to paper</a>
+      <a class="btn btn-dark" href="https://surfdrive.surf.nl/files/index.php/s/0k9vwKe8DZnWsdp">Download data</a>
+      <a class="btn btn-dark" href="https://github.com/coppolam/relative_localization_UWB_analysis/archive/master.zip">Download code</a>
+  </p>
+  </div>
+    <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/creative.min.js"></script>
+</body>
+</html>
