@@ -44,13 +44,16 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="index.html#publications">Publications</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#contact">Contact</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-    <section class="page-section bg-dark" id="project">
-      <div class="container text-white-75">
+    <section class="page-section bg-white" id="project">
+      <div class="container text-dark-75">
       <h1>Designing robotic swarms</h1>
       <p><strong>Small robots have limited perception and processing power. This is an inconvenient truth that we have to deal with. With swarm intelligence, however, we can unlock their potential by enabling them to work together.</strong></p><!-- wp:heading {"level":3} -->
       <h3>A novel algorithm for emergent behavior</h3><!-- /wp:heading -->
@@ -80,7 +83,7 @@
 </div>
     </section>
     </div><br>
-  <div class="container text-white-75">
+  <div class="container text-dark-75">
     <div>
       <h2>Optimizing the behavior of swarms</h2>
       <p>The theory developed in the above provided us with a reliable method for "clueless" robots to arrange into larger structure, but how could we enable them to do so efficiently? Just as with many other modern developments, machine learning plays an important role in swarm intelligence. But machine learning needs data, and in this case, “data” often means computationally expensive simulations where robots try out different behaviors, eventually learning how to fulfill a task. This causes several scalability problems when dealing with larger swarms or complex tasks.</p>
@@ -102,7 +105,7 @@
       <p>Just as a web surfer surfs the web, we model the experiences of a robot "navigating" in the swarm. The states that the robot can be in become like websites to visit, and the actions that the robot can take become hyperlinks. Then, we use a PageRank based approach to evaluate how likely the robot is to end up in certain states, and learn behaviors that cause the robot to visit states that are beneficial to the swarm's goal. This is a computationally efficient method that requires no simulation. Because it only analyzes the behavior of a single robot, rather than the whole swarm, it allows to develop complex behaviors for larger swarms without the same scalability issues.<br></p>
     </div>
 
-  </div><br>
+  </div>
 </section>
 <section class="page-section bg-light" id="project">
         <div class="container text-dark-75">
@@ -111,7 +114,7 @@
     <p><a id="pagerank" name="pagerank"></a>
       <h5>The PageRank algorithm as a method to optimize swarm behavior through local analysis.</h5>
       <b>Mario</b> <b>Coppola</b>, Jian Guo, Eberhard Gill, and Guido C. H.&nbsp;E. de&nbsp;Croon.
-      <em>Swarm Intelligence</em>, 13(3):277--319, Dec 2019.<br><br>
+      <em>Swarm Intelligence</em>, 13(3):277--319, Dec 2019.<br><br></p>
       <p class="text-right">
       <a class="btn btn-dark" href="https://link.springer.com/article/10.1007/s11721-019-00172-z">Link to paper</a>
       <a class="btn btn-dark" href="https://surfdrive.surf.nl/files/index.php/s/xrkOTVP30KI5Hle">Download data</a>
@@ -122,15 +125,21 @@
         <p><a id="paper1" name="paper1"></a>
           <h5>Provable self-organizing pattern formation by a swarm of robots with limited knowledge.</h5>
           <b>Mario</b> <b>Coppola</b>, Jian Guo, Eberhard Gill, and Guido C. H.&nbsp;E. de&nbsp;Croon. 
-          <em>Swarm Intelligence</em>, 13(1):59--94, Mar 2019.<br><br>
+          <em>Swarm Intelligence</em>, 13(1):59--94, Mar 2019.<br><br></p>
       <p class="text-right">
       <a class="btn btn-dark" href="https://link.springer.com/article/10.1007/s11721-019-00163-0">Link to paper</a>
       <a class="btn btn-dark" href="https://surfdrive.surf.nl/files/index.php/s/ZNM2mtKFdWHnRH9">Download data</a>
       <a class="btn btn-dark" href="https://github.com/coppolam/swarmulator/archive/SI_PatternFormation.zip">Download code</a>
     </p>
-<hr>
+  </div>
+</section>
+    <!-- Footer -->
+  <footer class="bg-dark py-5">
+    <!-- <div class="container"> -->
+      <div class="small text-center text-muted">Copyright &copy; 2020 - Mario Coppola</div>
+    <!-- </div> -->
+  </footer>
 
-  </div><br>
   <br>
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
