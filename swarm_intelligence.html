@@ -55,18 +55,29 @@
     <section class="page-section bg-white" id="project">
       <div class="container text-dark-75">
       <h1>Designing robotic swarms</h1>
-      <p><strong>Small robots have limited perception and processing power. This is an inconvenient truth that we have to deal with. With swarm intelligence, however, we can unlock their potential by enabling them to work together.</strong></p><!-- wp:heading {"level":3} -->
-      <h3>A novel algorithm for emergent behavior</h3><!-- /wp:heading -->
-      <p>In a recently published work, <a href="https://link.springer.com/article/10.1007/s11721-019-00163-0">available (open access) on the Swarm Intelligence Journal</a>, we proposed a new way to enable swarms of robots with limited knowledge and no communication to arrange into a larger pattern.</p>
-      <p>How limited were the robots? They were anonymous, without memory, reactive, homogeneous, could not communicate, could not plan ahead, and had no global positioning (no GPS). They did not know anything except the current relative position of their closest neighbors and a knowledge of North. How, then, could we make them form patterns together?</p>
-      <h3>The three rules of swarming</h3><!-- /wp:heading -->
-      <p>We developed an algorithm that follows three simple and intuitive rules:</p>
+      <p><strong>Small robots have limited perception and processing power. This is an inconvenient truth that we have to deal with. With swarm intelligence, however, we can unlock their potential by enabling them to work together. </strong></p>
+      <p><strong>
+      In this project, central to my PhD research, I set out to develop machine learning algorithms that would enable large teams of robots to collaborate together while verifying that their local choices would ultimately result in achieving the cooperative goal.
+      </strong></p>
+
+      <h3>Developing a novel algorithm for emergent behavior</h3>
+      <p>Prior to stepping into the machine learning domain, we needed to explore the complexity of swarms and understand the role of the single robot within the grand scheme. Pattern formation by very cognitively limited robots was chosen as a study case for this purpose. How limited were the robots? They were anonymous (no IDs!), without memory, reactive, homogeneous, could not communicate, could not plan ahead, no synchronization between their clocks, and had no global positioning (no GPS!). Essentially, they did not know anything except the current relative position of their closest neighbors and a knowledge of North. How, then, could we make them form patterns together?</p>
+
+      Delving into such a restricted problems allowed us to explore what it means to solve a cooperative challenge from the perspective of the individual robot.
+      This ultimately brought to the development of a novel algorithm to enable swarms of robots with limited knowledge and no communication to arrange into a larger pattern, which was then published <a href="https://link.springer.com/article/10.1007/s11721-019-00163-0">in the journal Swarm Intelligence</a>.
+
+      <h5>The three rules of swarming</h5><!-- /wp:heading -->
+      <p>The algorithm followed three simple and bio-inspired rules:</p>
       <ol>
         <li>Be safe (avoid collisions)</li>
         <li>Be social (avoid moving away from peers)</li>
         <li>Be happy (stay in desired local states)</li>
       </ol>
-      <p>The first two rules allow the swarm to reshuffle freely while never separating in multiple groups or experiencing collisions. The third rule tells robots to remain in "desired" states. These are local state observations whereby the agent is "happy", and thus does not move. The global goal (in this case a pattern) is achieved once all robots are "happy". They form the pattern by self-organizing into the correct "puzzle-piece" that forms the "puzzle".</p>
+      <p>The first two rules allow the swarm to reshuffle freely while never separating in multiple groups or experiencing collisions.
+      The third rule tells robots to remain in "happy" states, should they find themselves in one, else they need to move in search of "happiness".
+      A "happy" state is a local state observations whereby the agent is "happy", and thus does not move.
+      Unbeknownst to the robots (they are too cognitively limited), the global desired pattern is achieved once all robots are "happy".
+      They form the pattern by self-organizing into the correct "puzzle-piece" that forms the "puzzle".</p>
       <div id="photos" style="columns:1;">
         <figure class="photos" style="text-align: center;margin:auto;max-width:512px;font-size: 9pt;">
           <img alt="" class="wp-image-1222" onclick="magnify($(this).attr('src'))" src="http://mavlab.tudelft.nl/wp-content/uploads/2019/02/image-1024x446.png" width="100%">
@@ -75,8 +86,9 @@
           </figcaption>
         </figure>
       </div>
-      <p>Additionally, the paper introduces a novel verification procedure to check whether the swarm will always achieve its goal when starting from arbitrary initial conditions. The novelty of this procedure is that it analyzes the local state and action space of an agent, <strong>meaning that we can verify a global property by a local inspection of the behavior of a single robot</strong>, rather than looking at the swarm as a whole.<br></p>
-      <p>You can see the algorithm in action in the video below.</p>
+      <p>Additionally, the paper introduces a novel verification procedure to check whether the behavior of the robots is such that the swarm, as a whole, can eventually achieve its goal when starting from arbitrary initial conditions.
+      The novelty of this procedure is that it analyzes the local state and action space of an agent, <strong>meaning that we can verify a global property by a local inspection of the behavior of a single robot</strong>, rather than looking at the swarm as a whole.<br></p>
+      <p>Enough reading - you can see the algorithm in action in the video below!</p>
       <section> 
         <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/3slBBsMMvBo" allowfullscreen></iframe>
@@ -86,8 +98,15 @@
   <div class="container text-dark-75">
     <div>
       <h2>Optimizing the behavior of swarms</h2>
-      <p>The theory developed in the above provided us with a reliable method for "clueless" robots to arrange into larger structure, but how could we enable them to do so efficiently? Just as with many other modern developments, machine learning plays an important role in swarm intelligence. But machine learning needs data, and in this case, “data” often means computationally expensive simulations where robots try out different behaviors, eventually learning how to fulfill a task. This causes several scalability problems when dealing with larger swarms or complex tasks.</p>
-      <p><strong>Our <a href="http://link.springer.com/article/10.1007/s11721-019-00172-z">recent paper</a> use Google's PageRank algorithm to evaluate and optimize the behavior of swarms in a computationally efficient way, aimed at making swarms that are scalable, flexible, and robust.</strong></p>
+      <p>The theory developed in the above provided us with a reliable method for "clueless" robots to arrange into larger patterns. Here, were were faced with two challenges:
+      <ol>
+        <li>Optimizing the behavior of robots so that they would learn to become "happy" efficiently, without wasting time with random actions.</li>
+        <li>Abstracting our ideas to cooperative tasks other than pattern formation.</li>
+      </ol>
+
+      Let us focus on the first goal for now.
+      Just as with many other modern developments, machine learning plays an important role in swarm intelligence.
+      But machine learning needs data, and in this case, “data” often means computationally expensive simulations where robots try out different behaviors, eventually learning how to fulfill a task. This causes several scalability problems when dealing with larger swarms or complex tasks.</p>
     </div>
     <div>
       <!--div id="photos" style="columns:1;">
@@ -99,12 +118,18 @@
           </figcaption>
         </figure>
       </div-->
-      <h3>The PageRank algorithm</h3>
-      <p>Our latest research provides a novel solution: <em>to use</em> <strong><em><strong><em>Google’s famous <a href="https://en.wikipedia.org/wiki/PageRank">PageRank algorithm</a></em></strong></em></strong><em>&nbsp;in order to evaluate a behavior</em> <strong><em><strong><em>without any simulation</em></strong></em></strong><em>.</em> The PageRank algorithm was developed by the founders of Google back in the late ‘90s. Its objective was to sort through webpages and find the popular ones. This was done by evaluating how likely it would be for a web surfer to arrive at a webpage when clicking hyperlinks. This algorithm gave Google a competitive advantage.</p>
-      <h3>Bringing the algorithm to swarms</h3>
-      <p>Just as a web surfer surfs the web, we model the experiences of a robot "navigating" in the swarm. The states that the robot can be in become like websites to visit, and the actions that the robot can take become hyperlinks. Then, we use a PageRank based approach to evaluate how likely the robot is to end up in certain states, and learn behaviors that cause the robot to visit states that are beneficial to the swarm's goal. This is a computationally efficient method that requires no simulation. Because it only analyzes the behavior of a single robot, rather than the whole swarm, it allows to develop complex behaviors for larger swarms without the same scalability issues.<br></p>
+      <h5>PageRank centrality as a way to measure "happiness"</h5>
+      <p>Our latest research provides a novel solution inspired by <strong><em><strong><em>Google’s famous <a href="https://en.wikipedia.org/wiki/PageRank">PageRank algorithm</a></em></strong></em></strong><em>&nbsp;in order to evaluate a behavior</em> <strong><em><strong><em>without any simulation, but only based on a model of the local interactions that the agent experiences</em></strong></em></strong><em>.</em> The PageRank algorithm was developed by the founders of Google back in the late '90s. Its objective was to sort through webpages and find the popular ones. This was done by evaluating how likely it would be for a web surfer to arrive at a webpage when clicking hyperlinks. This algorithm gave Google a competitive advantage.</p>
+
+      <p>Just as a web surfer surfs the web, we thought to model the experiences of a robot "navigating" in the swarm. The states that the robot can be in become like websites to visit, and the actions that the robot can take become hyperlinks.
+        We then aimed for the machine learning algorithm (in this case, an evolutionary optimizer) to maximize the likelihood of robots to end up in "happy" states. This is a computationally efficient approach that requires no simulation. Because it only analyzes the behavior of a single robot, rather than the whole swarm, it allows to develop complex behaviors for larger swarms without the same scalability issues.<br></p>
+
+      <p> In addition to pattern formation, we also showed how to apply this to a consensus task (where the robots need to agree on a common objective) and an aggregation task (where the robots need to gather together).
+        The algorithm was published <a href="http://link.springer.com/article/10.1007/s11721-019-00172-z">here.</a></p><br>
     </div>
 
+    <h2>What's next? An end-to-end approach.</h2>
+      Currently, I am working on developing an end-to-end machine-learning framework so that we can extract local robot behaviors with as little a-priori knowledge as possible. This is work in progress, so I hope to update you soon!
   </div>
 </section>
 <section class="page-section bg-light" id="project">

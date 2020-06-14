@@ -48,25 +48,42 @@
 
     <section class="page-section bg-white" id="project">
       <div class="container text-dark-75">
-      <h1>On-board relative localization for drones</h1>
+      <h1>On-board relative localization for teams of tiny drones</h1>
       <div>
-        Teams of autonomous drones could be used in rescue missions, exploration, and more. How can we enable them to fly together safely? We are working on challenges to solve this. Imagine being able to launch several drones into a building and having them come back with relevant information within minutes – all autonomously. For drones to collaborate in such a task, they must be able to avoid each other, follow each other, and more. This all has to be done in an efficient way and entirely using drone-to-drone technology so that it is truly independent of the environment. We also need algorithms that run efficiently on-board, leaving as much computational power as possible for the real task.
+        <p>Imagine being able to launch several tiny drones into a building and having them come back with relevant information within minutes – all autonomously. Or, imagine having them finding a heavy object, gathering together, picking it up, and bringing it to you. Teams of autonomous drones could be used in rescue missions, exploration, and more.</p>
+        <p>
+        One of the major challenges to make this into a reality is to enable them to sense one another. Each drone should know the relative location of its neighboring drones.
+        At the very least, this is necessary for them to make sure that they don't fly into each other.
+        However, it is also central to enabling many, if not most, collaborative behaviors. This all has to be achieved in an efficient way, and, ideally, without relying on external infrastructure (including GPS), so that the system can be truly independent of the environment.</p>
+        <p>
+          In this project, we worked on relative localization for tiny, pocket-sized drones. Using such a limited platform pushed us to think of a novel method to get the most information out of a simple and lightweight sensor.
+          This brought us to relative localization using communication via an antenna.
+          This has shown to be accurate enough for leader-follower flight and, recently, even for pattern formation.
       </div>
-      <h2>Bluetooth based relative localization</h2>
+      <h2>Version #1: Collision avoidance using Bluetooth-based relative localization</h2>
       <div>
-        The first step to collaboration is not getting in each other’s way. In our first work, published in Autonomous Robots in May 2018, we devised an algorithm for relative localization that was based only on communication using Bluetooth antennas. The Bluetooth antennas also acted as range sensors using the Received Signal Strength Index (RSSI) of a signal. Thanks to this, even our tiny pocket drones were able to fly close to each other while avoiding collisions.<br>
+        <p>
+        The first step to collaboration is not getting in each other’s way.
+        In our first work <a href="https://repository.tudelft.nl/islandora/object/uuid:8145032a-9b1c-48c1-bf46-6f9d7405e5ef">(which I did during my MSc thesis in 2016) </a>.
+        and was later <a href="https://link.springer.com/article/10.1007/s10514-018-9760-3">published in the journal Autonomous Robots</a>, we devised an algorithm for 3D relative localization that was based only on communication using Bluetooth antennas.
+        The Bluetooth antennas also acted as range sensors using the Received Signal Strength Index (RSSI) of a signal.
+        Thanks to this, even our tiny pocket drones were able to fly close to each other while avoiding collisions.</p>
+        Check it out in this summary video (apologies in advance for my video editing skills).<br>
         <br>
-
         <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/snoMnxkcpGY" allowfullscreen></iframe>
 </div>
 
       </div><br>
-      <h2>UWB-based relative localization</h2>What started off as collision avoidance has now developed in full-fledged leader-follower flight, where a leader can fly and multiple drones can accurately track and follow its trajectory. The ranging accuracy of Bluetooth is low, and insufficient to enable behaviors that are more complex, such as leader-follower flight. By upgrading to Ultra Wide Band modules, we were able to achieve far more accurate ranging between the drones. Thanks to the increase in accuracy over Bluetooth ranging, we were also capable of eliminating the reliance on the magnetometer, thus also rendering the system completely independent of magnetic disturbances in indoor environments. Here is a video showing our demo flight. <!-- <br>
-          <img src="../figures/leaderfollower.gif"
-          style="width:40%;"
-          class="center"> -->
-      <br>
+      <h2>Version #2: UWB-based relative localization</h2>
+      <p>
+      What started off as collision avoidance has now developed in full-fledged leader-follower flight, where a leader can fly and multiple drones can accurately track and follow its trajectory.
+      The ranging accuracy of Bluetooth is low, and insufficient to enable behaviors that are more complex, such as leader-follower flight. By upgrading to Ultra Wide Band modules, we were able to achieve far more accurate ranging between the drones. Thanks to the increase in accuracy over Bluetooth ranging, we were also capable of eliminating the reliance on the magnetometer, thus also rendering the system completely independent of magnetic disturbances in indoor environments. </p>
+      <p>
+      This solution <a href="https://link.springer.com/article/10.1007/s10514-019-09843-6">was published in 2019 in the journal Autonomous Robots. You can check it out in action in the video below.</a>
+    </p>
+      <p>In more recent work, we brought this to tiny drones and larger teams, enabling self-calibration during the initial part of the flight. You can find out more <a href="https://shushuai3.github.io/autonomous-swarm/">here.</a> 
+      </p>
       <br>
               <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/LNFUveNR4p8" allowfullscreen></iframe>
@@ -76,27 +93,36 @@
 
 </section>
 <section class="page-section bg-light" id="project">
-        <div class="container text-dark-75">
+    <div class="container text-dark-75">
     <h2>Related publications</h2>
-
+    <p><a id="shushuai" name="shushuai"></a>
+      <h5>An autonomous swarm of micro flying robots with range-based relative localization.</h5>
+      Shushuai Li, <b>Mario</b> <b>Coppola</b>, Christophe De Wagter, Guido C. H. E. de Croon.
+      Submitted to IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2020.<br><br><p class="text-right">
+      <a class="btn btn-dark" href="https://arxiv.org/abs/2003.05853">Link to pre-print article</a>
+      <a class="btn btn-dark" href="https://shushuai3.github.io/autonomous-swarm/">Resources</a>
+      <a class="btn btn-dark" href="https://www.youtube.com/playlist?list=PL_KSX9GOn2P9sgaX3DHnPsnBCJ76fLNJ5">Videos</a>
+    </p>
     <p><a id="steven" name="steven"></a> 
       <h5>On-board range-based relative localization for micro air vehicles in indoor leader-follower flight.</h5>
       Steven van der Helm, <b>Mario</b> <b>Coppola</b>, Kimberly N. McGuire, and Guido C. H. E. de Croon. 
-      <em>Autonomous Robots</em>, Mar 2019.<br><br></p>
+      <em>Autonomous Robots</em>, 44(3):415-441, Mar 2019.<br><br>
           <p class="text-right">
-      <a class="btn btn-dark" href="https://link.springer.com/article/10.1007/s10514-018-9760-3">Link to paper</a>
-      <a class="btn btn-dark" href="https://surfdrive.surf.nl/files/index.php/s/SATKxMKwwQX26Jp">Download data</a>
-      <a class="btn btn-dark" href="https://github.com/coppolam/relative_localization_bluetooth_dataprocessing/archive/master.zip">Download code</a>
+      <a class="btn btn-dark" href="https://link.springer.com/article/10.1007/s10514-019-09843-6">Link to paper</a>
+      <a class="btn btn-dark" href="https://surfdrive.surf.nl/files/index.php/s/0k9vwKe8DZnWsdp">Download data</a>
+      <a class="btn btn-dark" href="https://github.com/coppolam/relative_localization_UWB_analysis/archive/master.zip">Download code</a>
+      <a class="btn btn-dark" href="https://www.youtube.com/playlist?list=PL_KSX9GOn2P--aEr4JtFl7SV3LO5QZY4q">Videos</a>  
     </p>
     <hr>    
   <p>
   <a id="bluetooth" name="bluetooth"></a> 
   <h5>On-board communication-based relative localization for collision avoidance in Micro Air Vehicle teams.</h5>
-  <b>Mario</b> <b>Coppola</b>, Kimberly&nbsp;N. McGuire, Kirk Y.&nbsp;W. Scheper, and Guido C. H.&nbsp;E. de&nbsp;Croon.  <em>Autonomous Robots</em>, 42(8):1787--1805, Dec 2018.<br><br></p>
+  <b>Mario</b> <b>Coppola</b>, Kimberly&nbsp;N. McGuire, Kirk Y.&nbsp;W. Scheper, and Guido C. H.&nbsp;E. de&nbsp;Croon.  <em>Autonomous Robots</em>, 42(8):1787-1805, Dec 2018.<br><br>
     <p class="text-right">
-      <a class="btn btn-dark" href="https://link.springer.com/article/10.1007/s10514-019-09843-6">Link to paper</a>
-      <a class="btn btn-dark" href="https://surfdrive.surf.nl/files/index.php/s/0k9vwKe8DZnWsdp">Download data</a>
-      <a class="btn btn-dark" href="https://github.com/coppolam/relative_localization_UWB_analysis/archive/master.zip">Download code</a>
+      <a class="btn btn-dark" href="https://link.springer.com/article/10.1007/s10514-018-9760-3">Link to paper</a>
+      <a class="btn btn-dark" href="https://surfdrive.surf.nl/files/index.php/s/SATKxMKwwQX26Jp">Download data</a>
+      <a class="btn btn-dark" href="https://github.com/coppolam/relative_localization_bluetooth_dataprocessing/archive/master.zip">Download code</a>
+      <a class="btn btn-dark" href="https://www.youtube.com/playlist?list=PL_KSX9GOn2P9f0qyWQNBMj7xpe1HARSpc">Videos</a>  
   </p>
   </div>
 </section>
