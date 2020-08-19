@@ -50,14 +50,14 @@
       <div class="container text-dark-75">
       <h1>On-board relative localization for teams of tiny drones</h1>
       <div>
-        <p>Imagine being able to launch several tiny drones into a building and having them come back with relevant information within minutes – all autonomously. Or, imagine having them finding a heavy object, gathering together, picking it up, and bringing it to you. Teams of autonomous drones could be used in rescue missions, exploration, and more.</p>
+        <p>Imagine being able to launch several tiny drones into a building and having them come back with relevant information within minutes – all autonomously. Or, imagine having them find a heavy object, gathering together, pick it up, and bring it to you. Teams of autonomous drones could be used in rescue missions, exploration, and more.</p>
         <p>
         One of the major challenges to make this into a reality is to enable them to sense one another. Each drone should know the relative location of its neighboring drones.
         At the very least, this is necessary for them to make sure that they don't fly into each other.
         However, it is also central to enabling many, if not most, collaborative behaviors. This all has to be achieved in an efficient way, and, ideally, without relying on external infrastructure (including GPS), so that the system can be truly independent of the environment.</p>
         <p>
           In this project, we worked on relative localization for tiny, pocket-sized drones. Using such a limited platform pushed us to think of a novel method to get the most information out of a simple and lightweight sensor.
-          This brought us to relative localization using communication via an antenna.
+          This brought us to relative localization using antenna communication.
           This has shown to be accurate enough for leader-follower flight and, recently, even for pattern formation.
       </div>
       <h2>Version #1: Collision avoidance using Bluetooth-based relative localization</h2>
@@ -65,9 +65,9 @@
         <p>
         The first step to collaboration is not getting in each other’s way.
         In our first work <a href="https://repository.tudelft.nl/islandora/object/uuid:8145032a-9b1c-48c1-bf46-6f9d7405e5ef">(which I did during my MSc thesis in 2016) </a>.
-        and was later <a href="https://link.springer.com/article/10.1007/s10514-018-9760-3">published in the journal Autonomous Robots</a>, we devised an algorithm for 3D relative localization that was based only on communication using Bluetooth antennas.
-        The Bluetooth antennas also acted as range sensors using the Received Signal Strength Index (RSSI) of a signal.
-        Thanks to this, even our tiny pocket drones were able to fly close to each other while avoiding collisions.</p>
+        and was later <a href="https://link.springer.com/article/10.1007/s10514-018-9760-3">published in the journal Autonomous Robots</a>, we devised an algorithm for 3D relative localization that was based on communication using Bluetooth antennas.
+        The Bluetooth antennas acted as range sensors using the Received Signal Strength Index (RSSI) of a signal between drones. Using an EKF, this was fused with on-board states (from the IMU, magnetometer, sonar, and optical flow camera) in order to get a full 3D relative location estimate.
+        Thanks to this efficient and lightweight approach, even our tiny pocket drones were able to fly close to each other while avoiding collisions.</p>
         Check it out in this summary video (apologies in advance for my video editing skills).<br>
         <br>
         <div class="embed-responsive embed-responsive-16by9">
@@ -78,7 +78,9 @@
       <h2>Version #2: UWB-based relative localization</h2>
       <p>
       What started off as collision avoidance has now developed in full-fledged leader-follower flight, where a leader can fly and multiple drones can accurately track and follow its trajectory.
-      The ranging accuracy of Bluetooth is low, and insufficient to enable behaviors that are more complex, such as leader-follower flight. By upgrading to Ultra Wide Band modules, we were able to achieve far more accurate ranging between the drones. Thanks to the increase in accuracy over Bluetooth ranging, we were also capable of eliminating the reliance on the magnetometer, thus also rendering the system completely independent of magnetic disturbances in indoor environments. </p>
+      The ranging accuracy of Bluetooth is low and insufficient to enable more complex behaviors such as leader-follower flight.
+      By upgrading to Ultra Wide Band modules, we were able to achieve far more accurate ranging between the drones.
+      Thanks to the increase in accuracy over Bluetooth ranging, we were also capable of eliminating the reliance on a common heading reference from a magnetometer, thus also rendering the system completely independent of magnetic disturbances in indoor environments. </p>
       <p>
       This solution <a href="https://link.springer.com/article/10.1007/s10514-019-09843-6">was published in 2019 in the journal Autonomous Robots. You can check it out in action in the video below.</a>
     </p>
